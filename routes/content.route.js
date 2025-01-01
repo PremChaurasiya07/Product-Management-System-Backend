@@ -1,7 +1,6 @@
 import express from "express";
 import { getproduct,register,createproduct, deleteproduct, editproduct, searchproduct, getspecificproduct, uploadfile, login } from "../controllers/home.controller.js";
 import { upload,uploadimg } from "../utils/cloudinary.js";
-import fs from 'fs';
 import authenticate from "../middlewares/authenticate.middleware.js";
 const router=express.Router();
 router.route('/auth/login').post(login);

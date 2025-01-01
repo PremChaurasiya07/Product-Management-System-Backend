@@ -20,6 +20,6 @@ const DBURL=process.env.DB_URL;
 connectdb(DBURL);
 app.use('/api',router);
 app.listen(PORT,()=>{
-    res.send(`Server is connected at port:${PORT}`);
+    console.log(`Server is connected at port:${PORT}`);
 });
 export default app;

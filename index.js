@@ -22,4 +22,5 @@ app.use('/api',router);
 app.listen(PORT,()=>{
     console.log(`Server is connected at port:${PORT}`);
 });
-export default app;
+
+export default app

@@ -4,17 +4,18 @@ import cors from 'cors';
 import connectdb from './db/db.js';
 import router from './routes/content.route.js';
 // import bodyParser from 'body-parser';
-
+configDotenv();
 const app=express();
+const PORT=process.env.PORT||5000;
+const DBURL=process.env.DB_URL;
 // app.use(bodyParser.urlencoded({ extended: true })); 
 // app.use(bodyParser.json());
-configDotenv();
+
 app.use(cors());
 app.use(express.json());
 
 
-const PORT=process.env.PORT||5000;
-const DBURL=process.env.DB_URL;
+
 
 connectdb(DBURL);
 app.use('/api',router);

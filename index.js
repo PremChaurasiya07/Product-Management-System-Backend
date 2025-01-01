@@ -2,8 +2,8 @@ import { configDotenv } from 'dotenv';
 import express, { urlencoded } from 'express';
 import cors from 'cors';
 import connectdb from './db/db.js';
-import { upload } from './utils/cloudinary.js';
 import router from './routes/content.route.js';
+import bodyParser from 'body-parser';
 
 const app=express();
 configDotenv();
@@ -22,4 +22,4 @@ app.use('/api',router);
 app.listen(PORT,()=>{
     res.send(`Server is connected at port:${PORT}`);
 });
-export {upload}
+export default app;

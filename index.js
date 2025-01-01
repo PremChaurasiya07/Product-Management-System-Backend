@@ -12,7 +12,7 @@ const DBURL=process.env.DB_URL;
 // app.use(bodyParser.json());
 
 app.use(cors(
-    { origin: 'https://product-management-system-frontend-pied.vercel.app/', }
+    { origin: 'https://product-management-system-frontend-pied.vercel.app', }
 ));
 app.use(express.json());
 

@@ -4,7 +4,7 @@ import { upload,uploadimg } from "../utils/cloudinary.js";
 import authenticate from "../middlewares/authenticate.middleware.js";
 const router=express.Router();
 router.get('/', (req, res) => 
-    { res.send('API is working!')}
+     res.send('API is working!')
 );
 router.route('/auth/login').post(login);
 router.route('/auth/register').post(register);

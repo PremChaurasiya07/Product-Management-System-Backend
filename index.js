@@ -1,5 +1,5 @@
 import { configDotenv } from 'dotenv';
-import express, { urlencoded } from 'express';
+import express from 'express';
 import cors from 'cors';
 import connectdb from './db/db.js';
 import router from './routes/content.route.js';
@@ -9,7 +9,6 @@ const app=express();
 configDotenv();
 app.use(cors());
 app.use(express.json());
-app.use(urlencoded());
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(bodyParser.json());
 

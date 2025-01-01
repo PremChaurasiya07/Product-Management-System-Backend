@@ -3,14 +3,14 @@ import express from 'express';
 import cors from 'cors';
 import connectdb from './db/db.js';
 import router from './routes/content.route.js';
-import bodyParser from 'body-parser';
+// import bodyParser from 'body-parser';
 
 const app=express();
+// app.use(bodyParser.urlencoded({ extended: true })); 
+// app.use(bodyParser.json());
 configDotenv();
 app.use(cors());
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true })); 
-app.use(bodyParser.json());
 
 
 const PORT=process.env.PORT||5000;
